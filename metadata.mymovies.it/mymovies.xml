@@ -86,8 +86,6 @@
                 <expression noclean="1" />
             </RegExp> 
 			
-			
-
 			<!-- Others Rating -->
 			<RegExp conditional="other_rating" input="$$8" output="&lt;$INFO[tag_other_rating]&gt;\1&lt;/$INFO[tag_other_rating]&gt;" dest="5+">
 				<!-- Dizionari -->
@@ -159,12 +157,11 @@
             <!-- Plot: It is used for report many information... -->
             <!-- Custum function are used only for see all buffer -->
             <!-- I buffer della GetDetails non sono visibili alle funzioni custom e non risco a trovare un approccio differente per appendere informazioni al plot -->
-            <RegExp input="$$1" output="&lt;url function=&quot;GetMoviePlot&quot;&gt;$$2&lt;/url&gt;" dest="5+">
+            <RegExp input="$$1" output="&lt;url cache=&quot;$$2-main.html&quot; function=&quot;GetMoviePlot&quot;&gt;$$2&lt;/url&gt;" dest="5+">
                 <expression />
             </RegExp>
-
-
-            <!-- Plot: all that you want append... -->
+ 
+             <!-- Plot: all that you want append... -->
             <RegExp conditional="critic" input="$$1" output="&lt;url function=&quot;GetMovieCritic&quot;&gt;\1&lt;/url&gt;" dest="5+">
                 <expression noclean="1">&lt;td class=&quot;rec_link_disattivo&quot;&gt;&lt;a title=&quot;[^&quot;]+&quot; href=&quot;([^&quot;]+)&quot;&gt;Critica&lt;/a&gt;&lt;/td&gt;</expression>
             </RegExp>
@@ -244,7 +241,7 @@
 			<RegExp input="$$4" output="\1" dest="5">
 				<expression noclean="1" clear="yes">([t0-9]+)</expression>
 			</RegExp>
-			<RegExp input="$$5" output="&lt;url function=&quot;GetTMDBFanartById&quot;&gt;http://www.imdb.com/title/\1/&lt;/url&gt;" dest="6">
+			<RegExp input="$$5" output="&lt;url function=&quot;GetTMDBFanartByIdChain&quot;&gt;http://www.imdb.com/title/\1/&lt;/url&gt;" dest="6">
 				<expression noclean="1" />
 			</RegExp>
 			<expression noclean="1" />
@@ -296,8 +293,7 @@
 		</RegExp>
 	</GetMovieFullCast>
 
-	<GetMoviePlot clearbuffers="no" dest="10">
-		
+	<GetMoviePlot clearbuffers="no" dest="10">		
         <!-- Simple Trim left plot -->
         <RegExp input="$$4" output="\1" dest="10">
             <RegExp input="$$1" output="\1" dest="4">
