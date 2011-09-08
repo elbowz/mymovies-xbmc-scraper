@@ -13,7 +13,7 @@
 	</NfoUrl>
 
 	<CreateSearchUrl dest="3">
-		<RegExp input="$$1" output="&lt;url&gt;http://www.google.it/search?q=\1$$4+site:mymovies.it&lt;/url&gt;" dest="3">
+		<RegExp input="$$1" output="&lt;url&gt;http://www.google.it/search?q=\1$$4+site:mymovies.it|User-Agent=Mozilla/5.0&lt;/url&gt;" dest="3">
 			<RegExp input="$$2" output="%20(\1)" dest="4">
 				<expression clear="yes">(.+)</expression>
 			</RegExp>

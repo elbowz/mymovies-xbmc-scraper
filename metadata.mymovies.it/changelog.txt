@@ -1,3 +1,6 @@
+[B]1.1.7[/B]
+- Added User Agent for error: "unable to connect to remote server"
+
 [B]1.1.6[/B]
 - Fixed regex: GetSearchResults, ParseImdbData (rating)
 
