@@ -1,4 +1,4 @@
-mymovies-xbmc-scraper
+MYMovies.it XBMC scraper
 =====================
 
 ### Info
