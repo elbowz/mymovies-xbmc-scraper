@@ -1,4 +1,4 @@
-MyMovies.it Scraper for XBMC
+mymovies-xbmc-scraper
 =====================
 
 ### Info
@@ -6,7 +6,8 @@ Sraper italiano per XBMC. Ottiene informazioni sui film dal sito mymovies.it.
 Lo scraper viene aggiornato direttamente dal repository ufficiale di XBMC.
 
 ### Coordinate
-[Topic ufficiale](http://forum.xbmc.org/showthread.php?t=58141)
+* [Topic ufficiale](http://forum.xbmc.org/showthread.php?t=58141)
+* [Official Page](http://addons.xbmc.org/show/metadata.mymovies.it)
 
 ### Latest release
 Install scraper da zip: [GoogleDrive](https://drive.google.com/folderview?id=0BzaXzhTPJkC7ZlhjU1RHVEp1SlU&usp=sharing#list)
