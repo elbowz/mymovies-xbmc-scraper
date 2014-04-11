@@ -145,12 +145,21 @@
 			<!-- Thumbs -->
 			<!-- Low res thumb get from first (scheda) film page -->
 			<RegExp conditional="!thumbs" input="$$1" output="&lt;thumb&gt;\1&lt;/thumb&gt;" dest="5+">
-				<expression cs="true" noclean="1">&lt;img style=&quot;[^&quot;]+&quot; src=&quot;([^&quot;]+)&quot; width=&quot;150px&quot; alt=&quot;Locandina</expression>
+				<expression cs="true" noclean="1">&lt;img(?:.*?)style=&quot;[^&quot;]+&quot; src=&quot;([^&quot;]+)&quot; width=&quot;150px&quot; alt=&quot;Locandina</expression>
 			</RegExp>
+
 			<!-- Get all film thumbs -->
-			<RegExp conditional="thumbs" input="$$1" output="&lt;url function=&quot;GetMovieThumbs&quot;&gt;\1&lt;/url&gt;" dest="5+">
-				<expression noclean="1">&lt;td class=&quot;rec_link_disattivo&quot;&gt;&lt;a title=&quot;Poster [^&quot;]+&quot; href=&quot;([^&quot;]+)&quot;&gt;Poster&lt;/a&gt;&lt;/td&gt;</expression>
-			</RegExp>
+            <RegExp conditional="thumbs" input="$$8" output="\1" dest="5+">
+                <!-- Get Always low res on main page -->
+                <RegExp input="$$1" output="&lt;thumb&gt;\1&lt;/thumb&gt;" dest="8">
+                    <expression cs="true" noclean="1">&lt;img(?:.*?)style=&quot;[^&quot;]+&quot; src=&quot;([^&quot;]+)&quot; width=&quot;150px&quot; alt=&quot;Locandina</expression>
+                </RegExp>
+                <!-- Check Poster page existence...if exist overwrite poster in low res-->
+                <RegExp input="$$1" output="&lt;url function=&quot;GetMovieThumbs&quot;&gt;\1&lt;/url&gt;" dest="8">
+                    <expression noclean="1">&lt;td class=&quot;rec_link_disattivo&quot;&gt;&lt;a title=&quot;Poster [^&quot;]+&quot; href=&quot;([^&quot;]+)&quot;&gt;Poster&lt;/a&gt;&lt;/td&gt;</expression>
+                </RegExp>
+                <expression noclean="1" />
+            </RegExp>
 
 			<!-- Trailer -->
 			<RegExp conditional="trailer" input="$$1" output="&lt;url function=&quot;GetMovieTrailer&quot;&gt;\1&lt;/url&gt;" dest="5+">
