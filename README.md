@@ -10,7 +10,7 @@ Lo scraper viene aggiornato direttamente dal repository ufficiale di XBMC.
 * [Official Page](http://addons.xbmc.org/show/metadata.mymovies.it)
 
 ### Latest release
-Install scraper da zip: [GoogleDrive](https://drive.google.com/folderview?id=0BzaXzhTPJkC7ZlhjU1RHVEp1SlU&usp=sharing#list)
+Installa scraper manualmente da zip: [GoogleDrive](https://drive.google.com/folderview?id=0BzaXzhTPJkC7ZlhjU1RHVEp1SlU&usp=sharing#list)
 
 ### Support
 * Se vuoi partecipare al 'progetto': fork, pull-request, issues, etc...
