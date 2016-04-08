@@ -1,5 +1,5 @@
 MyMovies.it XBMC scraper
-=====================
+=======================
 
 ### Info
 Sraper italiano per XBMC. Ottiene informazioni sui film dal sito mymovies.it.
